@@ -18,8 +18,8 @@ export function Navigation() {
     <nav className="border-b border-gray-200 bg-white">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
-          <Link href="/" className="text-lg font-medium text-gray-900">
-            Wedding Planner
+          <Link href="/" className="text-lg font-medium text-rose-600 hover:text-rose-700 transition-colors">
+            💒 Wedding Planner
           </Link>
           <div className="flex space-x-1">
             {categories.map((category) => {

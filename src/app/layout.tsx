@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Wedding Planner',
-  description: 'Plan your wedding with ease',
+  title: 'Wedding Planner 💒',
+  description: 'Inna & Joe\'s Wedding Planner',
 };
 
 export default function RootLayout({

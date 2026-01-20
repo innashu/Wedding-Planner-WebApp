@@ -53,14 +53,15 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="text-center mb-10">
-        <p className="text-rose-400 text-sm font-medium mb-1">💍 Inna & Joe's Wedding Day</p>
-        <h1 className="text-3xl font-semibold text-gray-900 mb-2">
-          November 8, 2026
+      <div className="text-center mb-12">
+        <h1 className="text-3xl font-light text-gray-800 mb-1">
+          Inna <span className="text-rose-400">&</span> Joe
         </h1>
-        <p className="text-gray-500">
-          {daysUntil} days to go — can't wait! 💕
-        </p>
+        <p className="text-gray-400 text-sm tracking-wide uppercase mb-6">November 8, 2026</p>
+        <div className="inline-flex items-center gap-2 text-rose-400">
+          <span className="text-2xl">💕</span>
+          <span className="text-sm font-medium">{daysUntil} days to go</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
