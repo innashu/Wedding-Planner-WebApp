@@ -185,25 +185,34 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
             onChange={() => toggleComplete(item.id, !item.completed)}
           />
           <button
-            className={`${item.completed ? "text-gray-300" : "text-rose-400"} hover:text-rose-600 transition-colors mt-0.5 shrink-0`}
+            className={`${item.completed ? "text-gray-300" : "text-rose-400"} hover:text-rose-600 transition-all mt-0.5 shrink-0 ${isExpanded ? "rotate-90" : ""}`}
             onClick={(e) => {
               e.stopPropagation();
               setIsExpanded(!isExpanded);
             }}
           >
-            {isExpanded ? "▼" : "▶"}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
           </button>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
               <span
-                className={`text-lg font-semibold hover:text-rose-600 cursor-pointer ${
+                className={`text-lg font-semibold ${
                   item.completed ? "line-through text-gray-400" : "text-gray-900"
                 }`}
-                onClick={(e) => handleNameClick(e, item.id)}
-                title="Click to edit date & notes"
               >
                 {item.name}
               </span>
+              <button
+                onClick={(e) => handleNameClick(e, item.id)}
+                className="opacity-0 group-hover:opacity-100 text-rose-400 hover:text-rose-600 transition-all"
+                title="Edit date & notes"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              </button>
             </div>
             {item.notes && (
               <p className={`text-base mt-1 truncate ${item.completed ? "text-gray-300" : "text-gray-500"}`}>
@@ -211,9 +220,12 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
               </p>
             )}
             {!isExpanded && hasSubItems && (
-              <p className="text-xs text-gray-400 italic mt-1">
-                {completedCount}/{subItems.length} done
-              </p>
+              <div className="flex items-center gap-1.5 mt-1">
+                <span className="text-xs text-rose-400 bg-rose-100 px-1.5 py-0.5 rounded-full">
+                  {completedCount}/{subItems.length}
+                </span>
+                <span className="text-xs text-gray-400">steps</span>
+              </div>
             )}
           </div>
         </div>
@@ -278,15 +290,24 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
                   </button>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span
-                    className={`text-sm hover:text-rose-600 cursor-pointer ${
-                      subItem.completed ? "line-through text-gray-400" : "text-gray-700"
-                    }`}
-                    onClick={() => setEditingItemId(subItem.id)}
-                    title="Click to edit date & notes"
-                  >
-                    {subItem.name}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`text-sm ${
+                        subItem.completed ? "line-through text-gray-400" : "text-gray-700"
+                      }`}
+                    >
+                      {subItem.name}
+                    </span>
+                    <button
+                      onClick={() => setEditingItemId(subItem.id)}
+                      className="opacity-0 group-hover:opacity-100 text-rose-400 hover:text-rose-600 transition-all"
+                      title="Edit date & notes"
+                    >
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                      </svg>
+                    </button>
+                  </div>
                   {subItem.notes && (
                     <p className={`text-sm mt-0.5 truncate ${
                       subItem.completed ? "text-gray-300" : "text-gray-500"
