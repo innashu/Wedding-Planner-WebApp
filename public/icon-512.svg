@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#db2777"/>
+  <g fill="none" stroke="white" stroke-width="20">
+    <!-- Two rings interlinked -->
+    <circle cx="200" cy="280" r="70"/>
+    <circle cx="312" cy="280" r="70"/>
+  </g>
+  <!-- Heart on top -->
+  <path d="M256 140 C256 140 220 100 180 100 C140 100 110 135 110 175 C110 230 256 300 256 300 C256 300 402 230 402 175 C402 135 372 100 332 100 C292 100 256 140 256 140Z" fill="white" transform="translate(0, -30) scale(0.6) translate(170, 50)"/>
+</svg>

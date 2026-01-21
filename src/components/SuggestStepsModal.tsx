@@ -106,7 +106,7 @@ export function SuggestStepsModal({
             onClick={handleConfirm}
             className="flex-1 px-4 py-2.5 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition-colors font-medium"
           >
-            Yes, add steps
+            Yes, add {includeTiming ? "steps" : "ideas"}
           </button>
           <button
             onClick={onClose}

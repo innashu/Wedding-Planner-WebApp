@@ -81,7 +81,7 @@ export default function HomePage() {
           </Link>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 max-w-[66%] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 sm:max-w-[66%] sm:mx-auto">
         {categories.slice(3).map((category) => (
           <Link
             key={category.href}

@@ -10,7 +10,9 @@
       "Bash(npx instant-cli push:*)",
       "Bash(curl:*)",
       "Bash(npx tsc:*)",
-      "Bash(npx instant-cli:*)"
+      "Bash(npx instant-cli:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
     ]
   }
 }
