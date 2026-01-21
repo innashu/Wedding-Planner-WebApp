@@ -174,12 +174,12 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
   };
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-2">
       <div
-        className="group flex items-start justify-between px-4 py-3 bg-rose-50/50 rounded-lg transition-colors cursor-pointer relative"
+        className="group flex items-start justify-between px-4 py-4 bg-rose-50/50 rounded-xl transition-colors cursor-pointer relative"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="flex items-start gap-2 flex-1 min-w-0">
+        <div className="flex items-start gap-3 flex-1 min-w-0">
           <Checkbox
             checked={!!item.completed}
             onChange={() => toggleComplete(item.id, !item.completed)}
@@ -252,13 +252,13 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
       </div>
 
       {isExpanded && (
-        <div className="ml-6 space-y-1">
+        <div className="ml-4 sm:ml-6 space-y-2 mt-2">
           {sortedSubItems.map((subItem, index) => (
             <div
               key={subItem.id}
-              className="group flex items-start justify-between px-4 py-2 bg-gray-50 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors relative"
+              className="group flex items-start justify-between px-4 py-3 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-200 transition-colors relative"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <Checkbox
                   checked={!!subItem.completed}
                   onChange={() => toggleComplete(subItem.id, !subItem.completed)}

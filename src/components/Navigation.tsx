@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const categories = [
-  { name: "Venue", href: "/venue", emoji: "💒" },
+  { name: "Venue", href: "/venue", emoji: "🏛️" },
   { name: "Guests", href: "/guests", emoji: "👥" },
   { name: "Ceremony", href: "/ceremony", emoji: "✡️" },
   { name: "Personal", href: "/personal", emoji: "👗" },
@@ -19,8 +19,8 @@ export function Navigation() {
       <div className="max-w-4xl mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="text-base sm:text-lg font-medium text-rose-600 hover:text-rose-700 transition-colors whitespace-nowrap">
-            <span className="sm:hidden">💒</span>
-            <span className="hidden sm:inline">💒 Wedding Planner</span>
+            <span className="sm:hidden">💕</span>
+            <span className="hidden sm:inline">💕 Wedding Planner</span>
           </Link>
           <div className="flex">
             {categories.map((category) => {
