@@ -7,7 +7,7 @@ const categories = [
     name: "Venue & Vendors",
     href: "/venue",
     description: "Venue, photography, music, florist",
-    emoji: "🏛️",
+    emoji: "🏰",
     color: "bg-rose-50 border-rose-100 hover:border-rose-200",
   },
   {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const categories = [
-  { name: "Venue", href: "/venue", emoji: "🏛️" },
+  { name: "Venue", href: "/venue", emoji: "🏰" },
   { name: "Guests", href: "/guests", emoji: "👥" },
   { name: "Ceremony", href: "/ceremony", emoji: "✡️" },
   { name: "Personal", href: "/personal", emoji: "👗" },
