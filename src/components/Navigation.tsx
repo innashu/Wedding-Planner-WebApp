@@ -7,8 +7,8 @@ const categories = [
   { name: "Venue & Vendors", href: "/venue", emoji: "💒" },
   { name: "Guests", href: "/guests", emoji: "👥" },
   { name: "Ceremony", href: "/ceremony", emoji: "✡️" },
-  { name: "To-Do List", href: "/todos", emoji: "📝" },
   { name: "Personal", href: "/personal", emoji: "👗" },
+  { name: "To-Do List", href: "/todos", emoji: "📝" },
 ];
 
 export function Navigation() {

@@ -28,6 +28,10 @@ const _schema = i.schema({
       notes: i.string().optional(),
       // For table sections: JSON string of column values e.g. {"col1": "value1", "col2": "value2"}
       columnValues: i.string().optional(),
+      // For sub-items: reference to parent item ID
+      parentId: i.string().indexed().optional(),
+      // For tracking completion status
+      completed: i.boolean().indexed().optional(),
     }),
     sections: i.entity({
       name: i.string(),
