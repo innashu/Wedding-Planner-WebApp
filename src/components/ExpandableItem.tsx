@@ -206,7 +206,7 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
               </span>
               <button
                 onClick={(e) => handleNameClick(e, item.id)}
-                className="opacity-0 group-hover:opacity-100 text-rose-400 hover:text-rose-600 transition-all"
+                className="text-rose-400 hover:text-rose-600 sm:opacity-0 sm:group-hover:opacity-100 transition-all"
                 title="Edit date & notes"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -240,7 +240,7 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
               e.stopPropagation();
               deleteItemWithSubItems(item, subItems);
             }}
-            className="opacity-0 group-hover:opacity-100 text-gray-300 hover:text-red-500 transition-all text-lg px-1"
+            className="text-gray-400 hover:text-red-500 sm:opacity-0 sm:group-hover:opacity-100 transition-all text-lg px-1"
             title="Delete item"
           >
             ×
@@ -300,7 +300,7 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
                     </span>
                     <button
                       onClick={() => setEditingItemId(subItem.id)}
-                      className="opacity-0 group-hover:opacity-100 text-rose-400 hover:text-rose-600 transition-all"
+                      className="text-rose-400 hover:text-rose-600 sm:opacity-0 sm:group-hover:opacity-100 transition-all"
                       title="Edit date & notes"
                     >
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -325,7 +325,7 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
                 )}
                 <button
                   onClick={() => deleteSubItem(subItem)}
-                  className="opacity-0 group-hover:opacity-100 text-gray-300 hover:text-red-500 transition-all text-lg px-1"
+                  className="text-gray-400 hover:text-red-500 sm:opacity-0 sm:group-hover:opacity-100 transition-all text-lg px-1"
                   title="Delete sub-item"
                 >
                   ×
