@@ -195,7 +195,6 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
           </button>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
-              <span className={item.completed ? "text-gray-300" : "text-rose-400"}>◆</span>
               <span
                 className={`text-lg font-semibold hover:text-rose-600 cursor-pointer ${
                   item.completed ? "line-through text-gray-400" : "text-gray-900"

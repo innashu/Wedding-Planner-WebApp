@@ -131,8 +131,7 @@ export function CategoryPage({ title, emoji, category }: CategoryPageProps) {
       {sections.map((section) => (
         <div key={section.id} className="mt-10 pt-8 border-t-2 border-gray-200">
           <div className="flex items-center justify-between mb-5">
-            <h2 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-              <span className="text-rose-400">◆</span>
+            <h2 className="text-lg font-semibold text-gray-900">
               {section.name}
             </h2>
             <div className="flex items-center gap-3 text-xs">
