@@ -215,7 +215,7 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
               </button>
             </div>
             {item.notes && (
-              <p className={`text-base mt-1 truncate ${item.completed ? "text-gray-300" : "text-gray-500"}`}>
+              <p className={`text-base mt-1 truncate ${item.completed ? "text-gray-300" : "text-purple-500"}`}>
                 {item.notes}
               </p>
             )}
@@ -310,7 +310,7 @@ export function ExpandableItem({ item, subItems }: ExpandableItemProps) {
                   </div>
                   {subItem.notes && (
                     <p className={`text-sm mt-0.5 truncate ${
-                      subItem.completed ? "text-gray-300" : "text-gray-500"
+                      subItem.completed ? "text-gray-300" : "text-purple-500"
                     }`}>
                       {subItem.notes}
                     </p>
