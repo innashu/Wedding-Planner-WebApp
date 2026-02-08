@@ -9,6 +9,7 @@ const categories = [
   { name: "Ceremony", href: "/ceremony", emoji: "✡️" },
   { name: "Personal", href: "/personal", emoji: "👗" },
   { name: "To-Do", href: "/todos", emoji: "📝" },
+  { name: "Timeline", href: "/timeline", emoji: "📅" },
 ];
 
 export function Navigation() {
