@@ -41,6 +41,15 @@ const _schema = i.schema({
       // JSON string array of column definitions e.g. [{"id": "col1", "name": "Venue"}, {"id": "col2", "name": "Price"}]
       columns: i.string().optional(),
     }),
+    timelineTasks: i.entity({
+      text: i.string(),
+      month: i.number().indexed(),
+      year: i.number().indexed(),
+      category: i.string().indexed(),
+      completed: i.boolean(),
+      order: i.number().indexed(),
+      createdAt: i.number(),
+    }),
   },
   links: {
     $usersLinkedPrimaryUser: {
